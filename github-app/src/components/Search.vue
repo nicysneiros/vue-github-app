@@ -11,7 +11,7 @@
         <div class="content">
           <div class="field has-addons">
             <input class="input" type="text" placeholder="Search users or repos" v-model="searchToken">
-            <a class="button is-danger search-button" @click="submitSearch">Search</a>
+            <a class="button is-danger search-button" @click="getResults">Search</a>
           </div>
         </div>
       </div>
@@ -20,6 +20,7 @@
 </template>
 
 <script>
+import router from './../router'
 export default {
   name: 'search',
   data () {
@@ -28,20 +29,12 @@ export default {
     }
   },
   methods: {
-    submitSearch: function (event) {
-      console.log(this.searchToken)
-      this.$http.get('https://api.github.com/search/repositories?q=' + this.searchToken).then(response => {
-        this.repositories = response.body.items
-        console.log('Repositories: ', this.repositories)
-      }, response => {
-        console.log(response)
-      })
-
-      this.$http.get('https://api.github.com/search/users?q=' + this.searchToken).then(response => {
-        this.users = response.body.items
-        console.log('Users: ', this.users)
-      }, response => {
-        console.log(response)
+    getResults: function (event) {
+      router.push({
+        name: 'results',
+        params: {
+          token: this.searchToken
+        }
       })
     }
   }
