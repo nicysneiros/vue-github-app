@@ -5,10 +5,10 @@
           <h1 class="title">
             Github APP
           </h1>
-          <div class="content">
+          <div class="column-content">
             <div class="columns">
-              <div class="column"><users v-bind:users="users"></users></div>
-              <div class="column"><repos v-bind:repos="repositories"></repos></div>
+              <div class="column users"><users v-bind:users="users"></users></div>
+              <div class="column repos"><repos v-bind:repos="repositories"></repos></div>
             </div>
           </div>
       </div>
@@ -52,5 +52,18 @@ export default {
 </script>
 
 <style>
-  
+  .column-content {
+    width: 80%;
+    margin: auto;
+  }
+  .column {
+    border-radius: 5px;
+    color: white !important;
+  }
+  .users {
+    background-color: #26547C;
+  }
+  .repos {
+    background-color: #EF476F;
+  }
 </style>

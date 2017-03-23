@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h1>Hello Repos</h1>
+		<h1 class="subtitle">Repositories</h1>
 		<p>{{repos}}</p>
 	</div>
 </template>
