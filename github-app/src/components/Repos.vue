@@ -1,7 +1,9 @@
 <template>
 	<div>
-		<h1 class="subtitle">Repositories</h1>
-		<p>{{repos}}</p>
+		<h1 class="subtitle">Repos</h1>
+		<div v-for="repo in repos" class="column">
+			<repo :repo="repo"></repo>
+		</div>
 	</div>
 </template>
 

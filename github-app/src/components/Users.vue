@@ -1,7 +1,11 @@
 <template>
 	<div>
 		<h1 class="subtitle">Users</h1>
-		<p>{{users}}</p>
+		<div class="columns is-multiline is-mobile">
+			<div v-for="user in users" class="column">
+				<user :user="user"></user>
+			</div>
+		</div>
 	</div>
 </template>
 
