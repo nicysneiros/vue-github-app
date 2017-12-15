@@ -3,7 +3,7 @@
     <div class="hero-body">
       <div class="container">
           <h1 class="title">
-            Github APP
+            Github Results
           </h1>
           <div class="column-content">
             <div class="columns">
