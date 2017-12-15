@@ -23,7 +23,7 @@ export default {
   name: 'search',
   data () {
     return {
-      searchToken: ''
+      searchToken: 'Search for users or repositories'
     }
   },
   methods: {
